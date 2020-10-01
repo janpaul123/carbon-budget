@@ -5,6 +5,8 @@ Thrown together by JP Posma (janpaulposma.nl).
 Inspired by the carbon budget chart in http://worrydream.com/ClimateChange/
 (knob.png and knob-down.png also kindly taken from there since it's MIT licensed as well)
 
+Note: all of this is of course a big simplification. There are significant error bars around these budgets, and earth systems don't respond linearly to emissions as depicted here. Still, this chart shows the general idea and is consistent with the IPCC reports.
+
 
 Sources:
 - Historical data:
