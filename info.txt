@@ -1,0 +1,54 @@
+carbon-budget.com
+
+Thrown together by JP Posma (janpaulposma.nl).
+
+Inspired by the carbon budget chart in http://worrydream.com/ClimateChange/
+(knob.png and knob-down.png also kindly taken from there since it's MIT licensed as well)
+
+
+Sources:
+- Historical data:
+  * 1960-2018: https://www.globalcarbonproject.org/carbonbudget/19/data.htm
+  * 2019-2021: per https://www.nature.com/articles/s41558-020-0797-x "no growth" for 2019
+  * and -4 to -7% growth in 2020 due to covid -- I used -5%; see https://www.globalcarbonproject.org/news/TemporaryReductionInCO2EmissionsDuringCOVID-19.html
+  * and ~4.5% rebound in 2021 as they cite IMF and EIA (+5.8% and +3.5% respectively)
+- Budgets:
+  * page 10, #1 of "Estimating and tracking the remaining carbon budget for stringent climate targets", Rogelj et al., Nature, 2019
+  * https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-019-1368-z/MediaObjects/41586_2019_1368_MOESM1_ESM.pdf
+  * #1 is "IPCC SR1.5 (2018) SAT"
+  * Manually subtracted amounts for 2018-2021
+- Initial "business as usual" trajectory:
+  * Roughly SSP3-7.0 (no policy). See https://www.nature.com/articles/d41586-020-00177-3
+- Everything else is cited in-line.
+
+
+Ideas for future additions:
+- Show historical budgets (0.5 and 1 degrees), and when we crossed those thresholds.
+- Show different projections along the x/y axes (Paris Agreement, IPCC projections, etc) + clickable for more information.
+- Add context to historical emissions, e.g. like https://i.cbc.ca/1.5497376.1584130076!/fileImage/httpImage/image.jpg_gen/derivatives/original_1180/graph-co2.jpg
+- Make the year that we start bringing down our emissions adjustable.
+
+Any improvements are welcome! Sources are available on Github: https://github.com/janpaul123/carbon-budget
+
+
+Licensed under the MIT license:
+
+Copyright (c) 2020, JP Posma and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

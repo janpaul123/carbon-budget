@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="node_modules/normalize.css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>How much CO<sub>2</sub> can we still burn?</h1>
+
+    <div id="chartContainer">
+      <svg id="chartSvg" xmlns="http://www.w3.org/2000/svg">
+        <path id="historicalPath" fill="#ccc" />
+        <path id="projectedPath" fill="#eee" />
+        <path id="budgetDead" />
+        <path id="budget20" />
+        <path id="budget15" />
+      </svg>
+      <div id="budgetLabel15" class="budgetLabel">1.5°C</div>
+      <div id="budgetLabel20" class="budgetLabel">2.0°C</div>
+      <div id="budgetLabelDead" class="budgetLabel">☠</div>
+      <div id="xAxis"></div>
+      <div id="yAxis"></div>
+      <div id="chartLegend">world carbon emissions (in GtCO<sub>2</sub>/yr)</div>
+      <div id="knobContainer">
+        <div id="knobRipples"></div>
+        <img src="knob.png" id="knobNeutral" />
+        <img src="knob-down.png" id="knobDown" />
+      </div>
+    </div>
+
+    <div class="popupContainer" id="popupContainer15">
+      <div class="popupLine"></div>
+      <div class="popup">
+        <p>It's the goal of the <a href="https://en.wikipedia.org/wiki/Paris_Agreement">Paris Agreement</a> to limit global warming to <span class="textBudget15">1.5°C</span> above pre-industrial levels. The <a href="https://en.wikipedia.org/wiki/Special_Report_on_Global_Warming_of_1.5_%C2%B0C">2018 IPCC report</a> says that the world has a budget of about <span class="textBudget15">420 GtCO<sub>2</sub></span>, to have a 66% chance to stay within that 1.5°C. By dragging the knob you can see that if we would cut down right now, we would have to get to zero emissions around <span class="textBudget15">2040</span>. (The IPCC itself uses a 50% chance, which means zero emissions at 2050.)</p>
+
+        <p>That said, <span class="textBudget15">1.5 degree</span> warming is still pretty bad. It's hard to model the exact consequences on us, but we know some things. By the end of the century:</p>
+
+        <ul>
+          <li>coral reefs will have declined by 70-90%</li>
+          <li>14% of the population will be exposed to severe heat once every 5 years</li>
+          <li>average droughts will last 2 months</li>
+          <li>271 million people will be exposed to water scarcity.</li>
+        </ul>
+
+        <p><a href="https://interactive.carbonbrief.org/impacts-climate-change-one-point-five-degrees-two-degrees/">These</a> <a href="https://www.wri.org/blog/2018/10/half-degree-and-world-apart-difference-climate-impacts-between-15-c-and-2-c-warming">two</a> websites have some more information.</p>
+      </div>
+    </div>
+
+    <div class="popupContainer" id="popupContainer20">
+      <div class="popupLine"></div>
+      <div class="popup">
+        <p>After <span class="textBudget15">1.5°C</span> warming, <span class="textBudget15">2.0°C</span> is the next big threshold. We want to stay well under this per the <a href="https://en.wikipedia.org/wiki/Paris_Agreement">Paris Agreement</a>. The budget is about <span class="textBudget20">1170 GtCO<sub>2</sub></span> <a href="https://en.wikipedia.org/wiki/Special_Report_on_Global_Warming_of_1.5_%C2%B0C">since 2018</a> (which includes the <span class="textBudget15">1.5°C</span> budget).
+
+        <p>It is harder to predict what would happen in this case, since it's further out, but to give you an idea, by the end of the century:</p>
+
+        <ul>
+          <li>coral reefs will have declined by <span class="textBudget20">99%</span> (vs <span class="textBudget15">70-90%</span>)</li>
+          <li><span class="textBudget20">37%</span> of the population will be exposed to severe heat once every 5 years (vs <span class="textBudget15">14%</span>)</li>
+          <li>average droughts will last <span class="textBudget20">4 months</span> (vs <span class="textBudget15">2 months</span>)</li>
+          <li><span class="textBudget20">388 million</span> people will be exposed to water scarcity  (vs <span class="textBudget15">271 million</span>).</li>
+        </ul>
+
+        <p><a href="https://interactive.carbonbrief.org/impacts-climate-change-one-point-five-degrees-two-degrees/">These</a> <a href="https://www.wri.org/blog/2018/10/half-degree-and-world-apart-difference-climate-impacts-between-15-c-and-2-c-warming">two</a> websites have some more information.</p>
+      </div>
+    </div>
+
+    <div class="popupContainer" id="popupContainerDead">
+      <div class="popupLine"></div>
+      <div class="popup">
+        <p>When we get past <span class="textBudget15">2.0°C</span>, things get tricky. Self-reinforcing natural feedback loops get activated, which can accelerate warming automatically, to potentially above <span class="textBudgetDead">10.0°C</span>. This would cause mass extinction of species, and make much of the planet uninhabitable. See <a href="https://www.youtube.com/watch?v=17aE91SBMoY">these</a> <a href="https://www.theguardian.com/environment/2019/may/18/climate-crisis-heat-is-on-global-heating-four-degrees-2100-change-way-we-live">resources</a> for more information.
+        </p>
+      </div>
+    </div>
+
+    <div class="explanation explanation1">
+      The <span class="textBudget15">green</span> and <span class="textBudget20">orange</span> areas are the "carbon budgets" for <span class="textBudget15">1.5</span> and <span class="textBudget20">2</span> degrees warming. If we don't do something, we'd blow through them in a few years. Drag the knob to see how we can stay within these budgets.
+    </div>
+
+    <div class="explanation explanation2">
+      <p>Explore the chart by clicking different areas. By when should world emissions be zero? How much worse is <span class="textBudget20">2</span> degrees than <span class="textBudget15">1.5</span> degrees?</p>
+
+      <p>If you are feeling hopeless in the face of climate change, check out <a href="https://www.youtube.com/watch?v=wbR-5mHI6bo">this video</a>. If you want to do something, learn about <a href="https://en.wikipedia.org/wiki/Individual_and_political_action_on_climate_change">things</a> <a href="https://en.wikipedia.org/wiki/Climate_change_mitigation">that</a> <a href="https://drawdown.org/">can</a> <a href="https://en.wikipedia.org/wiki/Climate_movement">be</a> <a href="https://www.myclimatejourney.co/">done</a>.</p>
+    </div>
+
+    <a id="info" href="info.txt">i</a>
+
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

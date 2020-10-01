@@ -1,0 +1,248 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  min-width: 950px;
+  min-height: 800px;
+}
+
+a, a:visited {
+  color: #5656b9;
+}
+a:hover, a:focus {
+  color: #353561;
+}
+
+h1 {
+  text-align: center;
+}
+
+#chartContainer {
+  position: relative;
+  margin: 50px auto;
+}
+
+#xAxis {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 1px;
+  width: 100%;
+  background: #999;
+}
+
+#yAxis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #999;
+}
+
+.yTick {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 1px;
+  transform: translateX(-100%);
+  background: #999;
+}
+
+.yTickLabel {
+  font-size: 22px;
+  color: #bbb;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.xTick {
+  position: absolute;
+  top: 100%;
+  width: 1px;
+  height: 4px;
+  background: #999;
+}
+
+.xTickLabel {
+  font-size: 22px;
+  color: #bbb;
+  position: absolute;
+  top: 6px;
+  transform: translateX(-50%);
+}
+
+.budgetLabel {
+  position: absolute;
+  font-size: 22px;
+  color: rgba(50,50,50,0.4);
+  top: 125px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#chartLegend {
+  position: absolute;
+  font-size: 18px;
+  color: #aaa;
+  top: 0px;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+#knobContainer {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+.isSmallScreen #knobContainer {
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes knobRipplesAnimation {
+  from {width: 0%; height: 0%; opacity: 1;}
+  90% {width: 150%; height: 150%; opacity: 0;}
+  to {width: 0%; height: 0%; opacity: 0;}
+}
+#knobRipples {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 5px solid rgba(50,50,50,0.3);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  animation: knobRipplesAnimation 1s infinite;
+}
+.interactionAllowed #knobRipples {
+  display: none;
+}
+
+#knobNeutral {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+}
+
+#knobDown {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+#budget15 {
+  fill: #84e680;
+}
+#budget20 {
+  fill: #f9b455;
+}
+#budgetDead {
+  fill: #fb6d6d;
+}
+.interactionAllowed #budget15:hover,
+body.popupActiveBudget15 #budget15 {
+  fill: #69e265;
+  cursor: pointer;
+}
+.interactionAllowed #budget20:hover,
+body.popupActiveBudget20 #budget20 {
+  fill: #ffad3c;
+  cursor: pointer;
+}
+.interactionAllowed #budgetDead:hover,
+body.popupActiveBudgetDead #budgetDead {
+  fill: #f54444;
+  cursor: pointer;
+}
+
+.explanation {
+  color: #333;
+  text-align: center;
+  max-width: 700px;
+  margin: 70px auto 0;
+  font-size: 20px;
+}
+.explanation2 {
+  display: none;
+}
+.interactionAllowed .explanation1 {
+  display: none;
+}
+.interactionAllowed .explanation2 {
+  display: block;
+}
+.textBudget15 {
+  color: #69e265;
+}
+.textBudget20 {
+  color: #ffad3c;
+}
+.textBudgetDead {
+  color: #ff0000;
+}
+body.popupActiveBudget15 .explanation2 {
+  display: none;
+}
+
+.popupContainer {
+  display: none;
+  position: relative;
+  margin: 70px auto 0;
+}
+
+.popupLine {
+  position: absolute;
+  bottom: 0px;
+  top: -69px;
+  left: 0px;
+  width: 2px;
+  background: #ddd;
+}
+
+.popup {
+  position: absolute;
+  color: #333;
+  font-size: 20px;
+  background: white;
+  max-width: 900px;
+  width: 100%;
+  border: 2px solid #ddd;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.popupActiveBudget15 #popupContainer15 {
+  display: block;
+}
+.popupActiveBudget20 #popupContainer20 {
+  display: block;
+}
+.popupActiveBudgetDead #popupContainerDead {
+  display: block;
+}
+
+a#info, a#info:visited {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  border: 1px solid #999;
+  color: #999;
+  border-radius: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+a#info:hover, a#info:focus {
+  color: #666;
+  border-color: #666;
+}
