@@ -1,6 +1,6 @@
-carbon-budget.com
+janpaulposma.nl/carbon-budget
 
-Thrown together by JP Posma (janpaulposma.nl).
+Thrown together by JP Posma.
 
 Inspired by the carbon budget chart in http://worrydream.com/ClimateChange/
 (knob.png and knob-down.png also kindly taken from there since it's MIT licensed as well)
